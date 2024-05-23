@@ -27,6 +27,7 @@ jobs:
           mkdir content/notebooks
           cp -r sonora/* content
           cp -r pynqremote/* content
+          cp demo_notebook.ipynb content/notebooks
           jupyter lite build --contents content --output-dir dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
