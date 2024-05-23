@@ -24,7 +24,6 @@ jobs:
       - name: Build the JupyterLite site
         run: |
           mkdir content
-          mkdir content
           cp -r sonora content
           cp -r pynqremote content
           cp demo_notebook.ipynb content
