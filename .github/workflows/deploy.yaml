@@ -26,7 +26,6 @@ jobs:
         run: |
           mkdir content
           mkdir content/notebooks
-          cp 
           cp README.md *.py *.proto content 
           cp -r sonora/* content
           cp -r pynqremote/* content
