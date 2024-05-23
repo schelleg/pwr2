@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package mmio;
+
+service MMIO {
+    rpc write(WriteRequest) returns (WriteReply) {}
+    rpc read(ReadRequest) returns (ReadReply) {}
+}
+
+message WriteRequest {
+    uint32 baseaddress = 1;
+    uint32 offset = 2;
+    uint32 data = 3;
+}
+
+message WriteReply {
+    string msg = 1;
+}
+
+message ReadRequest {
+    uint32 baseaddress = 1;
+    uint32 offset = 2;
+}
+
+message ReadReply {
+    uint32 data = 1;
+}
